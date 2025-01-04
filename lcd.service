@@ -1,0 +1,12 @@
+[Unit]
+Description=ADSB LCD/LED Service
+
+[Service]
+# Command to execute when the service is started
+ExecStart=/usr/bin/python /opt/adsbLCD/lcd-run.py
+Restart=on-failure
+WorkingDirectory=/opt/adsbLCD
+
+[Install]
+WantedBy=default.target
+
